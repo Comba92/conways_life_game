@@ -9,11 +9,11 @@ void loop(u_char** grid) {
    while (1) {
       print(grid);
       stats(counter++);
+      update(&grid, &updateGrid);
       if (pause()) {
          wait();
       }
-      update(&grid, &updateGrid);
-      sleep();
+      else sleep();
       clear();
    }
 }
