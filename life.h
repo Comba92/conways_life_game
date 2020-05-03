@@ -8,6 +8,7 @@
 
 int R;
 int C;
+int sleepTime;
 
 typedef unsigned char u_char;
 typedef enum booleans { true = 1, false = 0 } bool;
@@ -26,11 +27,15 @@ u_char** loadState(char* dest);
 /* user_interface */
 void print(u_char** p);
 void wait();
-void sleep(int t);
+bool pause();
+void sleep();
+void stats(int n);
 void banner();
 void clear();
 void loop(u_char *g);
 int get_input_between();
+void defaultConfig();
 void get_dimensions();
+void get_sleep_time();
 
 #endif 
